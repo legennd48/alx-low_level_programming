@@ -13,8 +13,8 @@ int main(void)
 	while (alpha < '{')
 	{
 		putchar(alpha);
-		putchar('\n');
 		alpha = alpha + 1;
 	}
+	putchar('\n');
 	return (0);
 }
