@@ -3,10 +3,11 @@
 #include <stdio.h>
 
 /**
- *Main - Prints last digit of a number and determins wether it is 0, >5 or <6.
+ *main - Prints last digit of a number and determins wether it is 0, >5 or <6.
  *
  *Return: Always 0 (Success)
 */
+
 int main(void)
 {
 	int n;
