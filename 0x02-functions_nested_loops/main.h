@@ -15,4 +15,11 @@ int _putchar(char a);
  */
 void print_alphabet(void);
 
+/**
+ * print_alphabet_x10 - prints the alphabet in lovercase 10x
+ * Return: 0
+ */
+void print_alphabet_x10(void);
+
+
 #endif
