@@ -27,4 +27,12 @@ void print_alphabet_x10(void);
  *Return: 1 if lowercase, 0 if uppercase
  */
 int _islower(int c);
+
+/**
+ *_isalpha - checks for alpha charracter
+ *@c: charactet to be inspected
+ *Return: 1 if alpha, 0 if not.
+ */
+
+int _isalpha(int c);
 #endif
