@@ -8,9 +8,9 @@ void times_table(void)
 	int row;
 	int col;
 
-	for (row = 0; row < 10; row ++)
+	for (row = 0; row <= 9; row ++)
 	{
-		for (col = 0; col < 10; col++)
+		for (col = 0; col < = 9; col++)
 		{
 			mult = (col * row);
 
@@ -18,14 +18,14 @@ void times_table(void)
 			{
 				_putchar('0' + mult);
 			}
-			else if (mult < 10)
+			else if (mult <= 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + mult);
 			}
-			else if (mult > 10)
+			else if (mult > 9)
 			{
 				_putchar(',');
 				_putchar(' ');
