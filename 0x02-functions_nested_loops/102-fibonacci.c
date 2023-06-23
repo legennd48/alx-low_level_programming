@@ -17,10 +17,17 @@ int main(void)
 
 	for (n = 3; n <= 50; n++)
 	{
-		printf("%lu, " , next);
-		n1 = n2;
-		n2 = next;
-		next = n1 + n2;
+		if (next != 20365011074)
+		{
+			printf("%lu, ", next);
+			n1 = n2;
+			n2 = next;
+			next = n1 + n2;
+		}
+		else
+		{
+			printf("%lu\n", next);
+		}
 	}
 	return (0);
 }
