@@ -7,7 +7,8 @@
 
 void print_number(int n)
 {
-	unsigned long int digs, tens, absolute_n, control;
+	unsigned int digs, tens, absolute_n;
+	double control;
 
 	absolute_n = n;
 	control = 1;
