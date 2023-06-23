@@ -30,7 +30,7 @@ int main(void)
 	for (; control < 99; control++)
 	{
 		splitter = (n1_t + n2_t) / 1000000000;
-		s_t = (n1_t + n2_t) - (1000000000 * splitter);
+		s_t = (n1_t + n2_t)-(1000000000 * splitter);
 		s_h = (n1_h + n2_h) + splitter;
 
 		printf(", %lu%lu", s_h, s_t);
