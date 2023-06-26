@@ -8,6 +8,9 @@
 void rev_string(char *s)
 {
 	int lent = 0, i;
+	char temp[1000];
+        char *x = temp;
+
 	while (*s != '\0')
 	{
 		s++;
@@ -18,8 +21,6 @@ void rev_string(char *s)
 		s--;
 		lent--;
 	}
-	char temp[1000];
-	char *x = temp;
 
 	for (i = lent; i >= 0; i--)
 	{
