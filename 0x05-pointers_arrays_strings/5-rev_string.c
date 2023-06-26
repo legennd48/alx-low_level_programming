@@ -27,7 +27,7 @@ void rev_string(char *s)
 		*(x + i) = *(s - i);
 	}
 
-	for (i = 0; i <= len; i++)
+	for (i = 0; i <= lent; i++)
 	{
 		*(s + i) = *(x + i);
 	}
