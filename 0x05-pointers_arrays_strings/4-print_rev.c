@@ -7,7 +7,7 @@
 
 void print_rev(char *s)
 {
-	int lent = 0;
+	int lent = 0, i;
 
 	while (*s != '\0')
 	{
@@ -20,8 +20,6 @@ void print_rev(char *s)
 		s--;
 		lent--;
 	}
-
-	int i;
 
 	for (i = lent; i >= 0; i--)
 	{
