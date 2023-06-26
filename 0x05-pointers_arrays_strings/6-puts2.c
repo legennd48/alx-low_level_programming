@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _put2 - prints every other char in a given string
+ * puts2 - prints every other char in a given string
  * @str: string to be printed
  */
 
