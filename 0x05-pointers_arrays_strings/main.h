@@ -16,7 +16,13 @@ void reset_to_98(int *n);
 
 void swap_int(int *a, int *b);
 
-
+/**
+ *_strlen - reads the lenght of a string
+ *@s: string whose lenght is to be read
+ *
+ *Return: lenght of string
+ */
+int _strlen(char *s);
 
 
 #endif
