@@ -17,45 +17,26 @@ int _atoi(char *s)
 	lent = 0;
 	flg = 0;
 	cVal = 0;
-
 	while (s[lent] != '\0')
-	{
 		lent++;
-	}
-
 	while (i < lent && flg == 0)
 	{
 		if (s[i] == '-')
-		{
 			++count;
-		}
-
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			cVal = s[i] - '0';
-
 			if (count % 2)
-			{
 				cVal = -cVal;
-			}
-
 			n = n * 10 + cVal;
-
 			flg = 1;
-
 			if (s[i + 1] < '0' || s[i + 1] > '9')
-			{
 				break;
-			}
 			flg = 0;
 		}
 		i++;
 	}
-
 	if (flg == 0)
-	{
 		return (0);
-	}
-
 	return (n);
 }
