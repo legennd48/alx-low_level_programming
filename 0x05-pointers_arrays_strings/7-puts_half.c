@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- *puts_half - prints the later half of a string
- *@str: string whose half is to be printed
+ * puts_half - prints the latter half of a string
+ * @str: string whose half is to be printed
  */
 
 void puts_half(char *str)
@@ -18,16 +18,16 @@ void puts_half(char *str)
 
 	if (lent % 2 == 0)
 	{
-		for (i = lent / 2; str[i] != '\0'; i++)
+		for (j = lent / 2; str[j] != '\0'; j++)
 		{
-			_putchar(str[i]);
+			_putchar(str[j]);
 		}
 	}
 	else if (lent % 2)
 	{
-		for (n = (lent - 1) / 2 + 1; n < lent; n++)
+		for (k = (lent + 1) / 2; k < lent; k++)
 		{
-			_putchar(str[n]);
+			_putchar(str[k]);
 		}
 	}
 	_putchar('\n');
