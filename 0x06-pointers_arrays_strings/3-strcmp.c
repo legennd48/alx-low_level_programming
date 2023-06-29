@@ -1,0 +1,36 @@
+#include "main.h"
+
+/**
+ * _strcmp - compares 2 strimgs and return an int
+ * depending on whish is greater
+ * @s1: first string to compare
+ * @s2: second string
+ * Return: int
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	int i = 0, sum1 = 0, sum2 = 0;
+
+	while (s1[i] != '\0')
+	{
+	sum1 += s1[i];
+	i++;
+	}
+
+	int j = 0;
+
+	while (s2[j] != '\0')
+	{
+		sum2 += s2[j];
+		j++;
+	}
+	if (sum1 == sum2)
+	{
+		return (0);
+	}
+	else
+	{
+		return (sum1 - sum2);
+	}
+}
