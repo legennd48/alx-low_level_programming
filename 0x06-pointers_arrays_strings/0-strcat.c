@@ -2,14 +2,14 @@
 /**
 *_strcat - concatenates 2 strings
 *@dest: dominant string
-*@src; string that will be appended to the other.
+*@src: string that will be appended to the other.
 *Return: dest
 */
 
 char *_strcat(char *dest, char *src)
 {
-	int dc;
-	int sc;
+	int dc = 0;
+	int sc = 0;
 
 	while (dest[dc] != '\0')
 	{
