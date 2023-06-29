@@ -10,27 +10,26 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
+	int j, i = 0, sum1 = 0, sum2 = 0;
 
-	while (s1[i] != '\0' && s2[2] != '\0')
+	while (s1[i] != '\0')
 	{
-		if (s1[i] != s2[i])
-		{
-			return s1[i] - s2[i];
-		}
-		i++;
+	sum1 += s1[i];
+	i++;
 	}
 
-	if (s1[i] == '\0' && s2[i] == '\0')
+	j = 0;
+	while (s2[j] != '\0')
+	{
+		sum2 += s2[j];
+		j++;
+	}
+	if (sum1 == sum2)
 	{
 		return (0);
 	}
-	else if (s1[i] == '\0')
-	{
-		return (-1);
-	}
 	else
 	{
-		return (1);
+		return (sum1 - sum2);
 	}
 }
