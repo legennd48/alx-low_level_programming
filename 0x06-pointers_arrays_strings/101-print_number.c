@@ -2,7 +2,7 @@
 
 /**
  *print_number - print an integer, without using long, arrays or pointers
- *@num: number to be printed
+ *@n: number to be printed
  */
 
 void print_number(int n)
@@ -23,7 +23,7 @@ void print_number(int n)
 		positive = -n;
 	}
 
-	while (positive / divisor >= 10)
+	while (divisor <= positive / 10)
 	{
 		divisor *= 10;
 	}
