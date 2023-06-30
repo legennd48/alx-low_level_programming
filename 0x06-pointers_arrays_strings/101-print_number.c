@@ -30,8 +30,9 @@ void print_number(int n)
 
 	while (divisor != 0)
 	{
-		digit = (positive / divisor) % 10;
+		digit = positive / divisor;
 		_putchar('0' + digit);
+		positive %= divisor;
 		divisor /= 10;
 	}
 }
