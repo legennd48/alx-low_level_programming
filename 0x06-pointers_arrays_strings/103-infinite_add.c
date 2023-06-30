@@ -32,58 +32,42 @@ void rev_string(char *s)
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, count = 0;
-	int carry = 0, num1 = 0, num2 = 0, total = 0;
+	int carry = 0, index1 = 0, index2 = 0, digitCount = 0;
+	int value1 = 0, value2 = 0, total = 0;
 
-	while (n1[i] != '\0')
+	while (*(n1 + index1) != '\0')
+		index1++;
+	while (*(n2 + index2) != '\0')
+		index2++;
+	index1--;
+	index2--;
+	if (index2 >= size_r || index1 >= size_r)
+		return (0);
+	while (index2 >= 0 || index1 >= 0 || carry == 1)
 	{
-		i++;
+		if (index1 < 0)
+			value1 = 0;
+		else
+			value1 = *(n1 + index1) - '0';
+		if (index2 < 0)
+			value2 = 0;
+		else
+			value2 = *(n2 + index2) - '0';
+		total = value1 + value2 + carry;
+		if (total >= 10)
+			carry = 1;
+		else
+			carry = 0;
+		if (digitCount >= (size_r - 1))
+			return (0);
+		*(r + digitCount) = (total % 10) + '0';
+		digitCount++;
+		index2--;
+		index1--;
 	}
-	while (n2[j] != '\0')
-	{
-		j--;
-	}
-	i--;
-	j--;
-
-    if (j >= size_r || i >= size_r)
-    {
-	    return (0);
-    }
-
-    while (j >= 0 || i >= 0 || carry == 1)
-    {
-        if (i < 0)
-            num1 = 0;
-        else
-            num1 = n1[i] - '0';
-
-        if (j < 0)
-            num2 = 0;
-        else
-            num2 = n2[j] - '0';
-
-        total = num1 + num2 + carry;
-
-        if (total >= 10)
-            carry = 1;
-        else
-            carry = 0;
-
-        if (count >= (size_r - 1))
-            return 0;
-
-        r[count] = (total % 10) + '0';
-        count++;
-        j--;
-        i--;
-    }
-
-    if (count == size_r)
-        return 0;
-
-    r[count] = '\0';
-    rev_string(r);
-
-    return r;
+	if (digitCount == size_r)
+		return (0);
+	*(r + digitCount) = '\0';
+	rev_string(r);
+	return (r);
 }
