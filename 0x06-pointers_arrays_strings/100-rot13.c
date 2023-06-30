@@ -14,19 +14,15 @@ char *rot13(char *s)
 
 	while (*s != '\0')
 	{
-		if ((*s >= 'A' && *s <= 'Z') || (*s >= 'a' && *s <= 'z'))
+		for (i = 0; i < 52; i++)
 		{
-			for (i = 0; i < 52; i++)
+			if (*s == alpha[i])
 			{
-				if (*s == alpha[i])
-				{
-					*s = rot[i];
-					break;
-				}
+				*s = rot[i];
+				break;
 			}
 		}
-		s++;
+	s++;
 	}
-
 	return (s);
 }
