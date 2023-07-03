@@ -5,6 +5,7 @@
  *@s: memory area to be filled
  *@b: the constant byte used for filling
  *@n: the number of times it will be filled
+ *Return: s
  */
 
 char *_memset(char *s, char b, unsigned int n)
