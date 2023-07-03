@@ -1,7 +1,9 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strcht - searches gor a character in string and returns pointer to that character
+ * _strchr - searches gor a character in string and returns pointer
+ *to that character
  * @s: string to be searched
  * @c: character yo be searched for
  * Return: pointer or NULL
@@ -29,5 +31,5 @@ char *_strchr(char *s, char c)
 	{
 		return (NULL);
 	}
-
+	return (NULL);
 }
