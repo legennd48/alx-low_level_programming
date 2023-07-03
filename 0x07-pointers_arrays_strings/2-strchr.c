@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#define NULL 0
 
 /**
  * _strchr - searches gor a character in string and returns pointer
@@ -16,12 +16,13 @@ char *_strchr(char *s, char c)
 
 	while (s[i] != '\0')
 	{
-		if (s[j] == c)
+		if (s[i] == c)
 		{
-			m = &s[j];
+			m = &s[i];
 			return (m);
 		}
 		i++;
 	}
+
 	return (NULL);
 }
