@@ -9,9 +9,9 @@
 
 void print_diagsums(int *matrix, int size)
 {
-	nt diagsum1 = 0;
-	nt diagsum2 = 0;
-	nt row, index;
+	int diagsum1 = 0;
+	int diagsum2 = 0;
+	int row, index;
 
 	for (row = 0; row < size; row++)
 	{
