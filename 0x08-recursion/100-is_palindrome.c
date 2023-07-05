@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int _strlen_r(char *s);
-int true_pal(char start, char end);
+int true_pal(char *start, char *end);
 
 /**
  * is_palindrome - checks if a string is a palindrome

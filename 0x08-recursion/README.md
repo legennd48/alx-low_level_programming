@@ -10,4 +10,4 @@ thank you
 5-sqrt_recursion.c
 main.h
 6-is_prime_number.c
-README.md
+100-is_palindrome.c
