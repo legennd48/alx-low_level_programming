@@ -46,7 +46,7 @@ int _strlen_r(char *s)
  * the middllle to c if they are the same
  * @start: beginning of string
  * @end: end of string before '\0'
- * Return; 0, 1, depending on what is found
+ * Return: 0, 1, depending on what is found
  */
 
 int true_pal(char *start, char *end)
