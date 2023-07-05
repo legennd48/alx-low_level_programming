@@ -3,12 +3,12 @@
 int real_root(int a, int b);
 
 /**
- * sqrt_recursion - finds the square root of an int
+ * _sqrt_recursion - finds the square root of an int
  * @n: numbers whose sqrt to find.
  * Return: sqrt or -1 if no natural sqrt
  */
 
-int sqrt_recursion(int n)
+int _sqrt_recursion(int n)
 {
 	if (n <= 0)
 	{

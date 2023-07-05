@@ -40,5 +40,5 @@ int true_prime(int n, int m)
 	{
 		return (0);
 	}
-	return (true_prime(n, m + 1))
+	return (true_prime(n, m + 1));
 }
