@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include "main.h"
 
 int _strlen_r(char *s);
 int true_pal(char *start, char *end);
