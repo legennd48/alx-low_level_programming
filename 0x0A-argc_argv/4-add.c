@@ -6,7 +6,7 @@
  * main - adds all numbers supplied in args
  * @argc: number of arguments
  * @argv: array of arguments
- * Retutn: 0 if success 1 if error
+ * Return: 0 if success 1 if error
  */
 
 int main(int argc, char **argv)
@@ -28,13 +28,6 @@ int main(int argc, char **argv)
 				printf("Error\n");
 				return (1);
 			}
-/**
-* 		if (isalpha(atoi(argv[i])) == 0)
-*		{
-*			printf("Error\n");
-*			return (1);
-*		}
-*/
 		}
 
 		sum += atoi(argv[i]);
@@ -43,6 +36,5 @@ int main(int argc, char **argv)
 	printf("%d\n", sum);
 
 	return (0);
-
 
 }
