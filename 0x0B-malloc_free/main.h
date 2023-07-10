@@ -28,4 +28,19 @@ char *_strdup(char *str);
  */
 char *str_concat(char *s1, char *s2);
 
+/**
+ * alloc_grid - returns pointer to initialized 2d array of ints.
+ * @width: number of cols
+ * @height: number of rows.
+ * Return: NULL or pointer to array.
+ */
+
+int **alloc_grid(int width, int height);
+
+
+
+
+
+
+
 #endif
