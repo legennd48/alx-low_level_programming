@@ -20,4 +20,12 @@ char *create_array(unsigned int size, char c);
  */
 char *_strdup(char *str);
 
+/**
+ * str_concat - concatenates two strings.
+ * @s1: first and destination string
+ * @s2: second string
+ * Return: NULL or new string pointer
+ */
+char *str_concat(char *s1, char *s2);
+
 #endif
