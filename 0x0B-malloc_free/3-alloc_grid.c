@@ -26,11 +26,9 @@ int **alloc_grid(int width, int height)
         grid[i] = (int *) malloc(width * sizeof(int));
         if (grid[i] == NULL)
         {
-            // Free the memory allocated for the previous rows
             for (j = 0; j < i; j++)
                 free(grid[j]);
 
-            // Free the main grid pointer
             free(grid);
             return NULL;
         }
