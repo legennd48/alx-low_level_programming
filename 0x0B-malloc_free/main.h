@@ -10,7 +10,14 @@
  */
 char *create_array(unsigned int size, char c);
 
-
-
+/**
+ * _strdup - eturns a pointer to a newly allocated space in memory, which
+ * contains a copy of the string given as a parameter.eturns a pointer to
+ * a newly allocated space in memory, which contains a copy of the string
+ * given as a parameter.
+ * @str: string to be copied
+ * Return: NULL is str is null or mem allocation fails or pointer to new string
+ */
+char *_strdup(char *str);
 
 #endif
