@@ -45,8 +45,16 @@ int **alloc_grid(int width, int height);
 
 void free_grid(int **grid, int height);
 
+/**
+ * argstostr - concatenates all arguments to the program to a string with
+ * each argument seperated by a new line
+ * @ac: number of arguments.
+ * @av: arguments recieved.
+ * Return: Null or pointer to new string
+ */
+
 char *argstostr(int ac, char **av);
 
-
+char **strtow(char *str);
 
 #endif
