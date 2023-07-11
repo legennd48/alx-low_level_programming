@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int wcount, i, j, pos;
 	char **words;
 
-	if (str == NULL || str[0] == '\0' || str == "")
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	wcount = 0;
 	for (i = 0; str[i] != '\0'; i++)
