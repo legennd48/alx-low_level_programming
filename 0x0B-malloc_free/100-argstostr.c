@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 			j++;
 		tcount += j + 1;
 	}
-	new = (char *) malloc(tcount * sizeof(char));
+	new = (char *) malloc((tcount * sizeof(char)) + 1);
 
 	if (new == NULL)
 	{
