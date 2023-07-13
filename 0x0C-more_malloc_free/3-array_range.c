@@ -23,7 +23,7 @@ int *array_range(int min, int max)
 	}
 
 	intarr = malloc(n * sizeof(int));
-	
+
 	if (intarr == NULL)
 	{
 		return (NULL);
