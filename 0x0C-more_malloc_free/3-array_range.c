@@ -10,19 +10,16 @@
 
 int *array_range(int min, int max)
 {
-	int n = 0, i, next, *intarr;
+	int size, i, next, *intarr;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
 
-	while (min <= max)
-	{
-		n++;
-	}
+	size = max - min + 1;
 
-	intarr = malloc(n * sizeof(int));
+	intarr = malloc(size * sizeof(int));
 
 	if (intarr == NULL)
 	{
@@ -31,7 +28,7 @@ int *array_range(int min, int max)
 
 	next = min;
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < size; i++)
 	{
 		intarr[i] = next;
 		next++;
