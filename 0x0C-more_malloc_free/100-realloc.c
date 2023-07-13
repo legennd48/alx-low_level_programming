@@ -5,7 +5,7 @@
  * *_realloc - reallocates a memory block using malloc and free
  * @ptr: pointer to memory set for extension/reduction
  * @old_size: size of pointer to be reallocated
- * @new_size: size of new mem 
+ * @new_size: size of new mem to be allocated
  * Return: NULL ot pointer to newly allocated mem
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
