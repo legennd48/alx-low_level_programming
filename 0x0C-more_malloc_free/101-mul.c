@@ -27,7 +27,7 @@ void error(void)
 int main(int argc, char **argv)
 {
 	char *num1 = argv[1], *num2 = argv[2];
-	unsigned long long int *holder, digit;
+	unsigned long int *holder, digit;
 	int i, j = 0;
 
 	if (argc != 3)
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 			error();
 		j++;
 	}
-	holder = malloc(j * sizeof(unsigned long long int));
+	holder = malloc(j * sizeof(unsigned long int));
 
 	if (!holder)
 		error();
