@@ -1,6 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
-
+#in
 /**
  * free_dog - frees the memory aloocated to dog struct files
  * @d: pointer to structur date
@@ -9,7 +9,7 @@
 void free_dog(dog_t *d)
 {
 	if (d == NULL)
-		return;
+		return (NULL);
 	free(d->name);
 	free(d->owner);
 	free(d);
