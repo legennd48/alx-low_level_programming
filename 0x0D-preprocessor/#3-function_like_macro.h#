@@ -1,0 +1,40 @@
+ile Edit Options Buffers Tools C Help
+ 1#ifndef _3_FUNCTION_LIKE_MACRO_H
+ 2#define _3_FUNCTION_LIKE_MACRO_H
+ 3
+ 4
+ 5
+6#define ABS(x); {            \
+	7        if (x < 0)           \
+		8                x = x * -1;  \
+	 9        else                 \
+		10                x;           \
+	11        }
+12
+13
+14
+15
+16
+17
+18
+19
+20#end#ifndef _3_FUNCTION_LIKE_MACRO_H
+#define _3_FUNCTION_LIKE_MACRO_H
+
+
+
+#define ABS(x); {	     \
+	if (x < 0)           \
+		x = x * -1;  \
+	else                 \
+		x;           \
+	}
+
+
+
+
+
+
+
+
+#endif
