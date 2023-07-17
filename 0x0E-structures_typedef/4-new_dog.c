@@ -80,8 +80,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	copy(dog_data->owner, dog_data->owner);
-	copy(dog_data->name, dog_data->name);
+	copy(dog_data->owner, owner);
+	copy(dog_data->name, name);
 	dog_data->age = age;
 
 	return (dog_data);
