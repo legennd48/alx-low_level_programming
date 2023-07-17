@@ -13,3 +13,5 @@ you will find a list of directories eithin this repo below:
 0x0A-argc_argv
 0x0B-malloc_free
 README.md
+0x0C-more_malloc_free
+0x0D-preprocessor
