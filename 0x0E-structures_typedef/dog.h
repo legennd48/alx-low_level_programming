@@ -36,4 +36,5 @@ char *copy(char *dest, char *src);
 
 int lent(char *s);
 
+void free_dog(dog_t *d);
 #endif
