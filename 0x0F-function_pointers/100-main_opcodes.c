@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	char *e = "Error", *ar = (char *)main;
-	int bytes, i;
+	int bytes, i, main_bytes = 0;
 
 	if (argc != 2)
 	{
@@ -22,14 +22,22 @@ int main(int argc, char *argv[])
 	}
 	bytes = atoi(argv[1]);
 
-	if (bytes < 0 || bytes < ((char *)main - ar + bytes))
+	if (bytes < 0 /*|| bytes < ((char *)main - ar + bytes)*/)
 	{
 		printf("%s\n", e);
 		exit(2);
 	}
-	for (i = 0; i < bytes; i++)
+	while (main_bytes < bytes)
 	{
-		if (i == (bytes - 1))
+		if (ar[main_bytes] == '\0')
+			break;
+		main_bytes++;
+	}
+	/*main_bytes = (char *)main - ar + bytes;*/
+
+	for (i = 0; i < bytes && i < main_bytes; i++)
+	{
+		if (i == (bytes - 1) || i == (main_bytes - 1))
 		{
 			printf("%02hhx ", ar[i]);
 			break;
