@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-#include <stdio.h>
 
 
 /**
@@ -23,7 +22,7 @@ int main(int argc, char *argv[])
 	}
 	bytes = atoi(argv[1]);
 
-	if (bytes < 0)
+	if (bytes < 0 || bytes < ((char *)main - ar + bytes))
 	{
 		printf("%s\n", e);
 		exit(2);
