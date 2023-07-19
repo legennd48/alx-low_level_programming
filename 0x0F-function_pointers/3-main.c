@@ -12,28 +12,33 @@
 
 int main(int argc, char *argv[])
 {
-	char *e = "Error", operators[5] = {'+', '-', '*', '/', '%'};
-	int (*calc)(int, int), i;
+	char *e = "Error";
+	int (*calc)(int, int), a, b;
 
 	if (argc != 4)
 	{
 		printf("%s\n", e);
 		exit(98);
 	}
+
+	calc = get_op_func(argv[2]);
+
+	if (calc == NULL)
+	{
+		printf("%s\n", e);
+		exit(99);
+	}
+
 	if ((argv[2][0] == '/' || argv[2][0] == '%') && atoi(argv[3]) == 0)
 	{
 		printf("%s\n", e);
 		exit(100);
 	}
-	for (i = 0; i < 5; i++)
-	{
-		if (operators[i] == argv[2][0])
-		{
-			calc = get_op_func(argv[2]);
-			printf("%d\n", calc(atoi(argv[1]), atoi(argv[3])));
-			return (0);
-		}
-	}
-	printf("%s\n", e);
-	exit(99);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", calc(a, b));
+
+	return (0);
+
 }
