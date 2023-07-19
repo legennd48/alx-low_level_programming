@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	char *e = "Error", operators[5] = {'+','-','*','/','%'};
+	char *e = "Error", operators[5] = {'+', '-', '*', '/', '%'};
 	int (*calc)(int, int), i;
 
 	if (argc != 4)
