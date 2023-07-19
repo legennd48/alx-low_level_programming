@@ -23,13 +23,13 @@ int main(int argc, char *argv[])
 
 	calc = get_op_func(argv[2]);
 
-	if (calc == NULL)
+	if (calc == NULL || argv[2][1] != '\0')
 	{
 		printf("%s\n", e);
 		exit(99);
 	}
 
-	if ((*argv[2] == '/' || *argv[2] == '%') && atoi(argv[3]) == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && atoi(argv[3]) == 0)
 	{
 		printf("%s\n", e);
 		exit(100);
