@@ -12,7 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	char *e = "Error", *ar = (char *)main;
+	char *e = "Error";
+	int (*ar)(int, char**) = main;
 	int bytes, i, main_bytes = 0;
 
 	if (argc != 2)
@@ -22,27 +23,26 @@ int main(int argc, char *argv[])
 	}
 	bytes = atoi(argv[1]);
 
-	if (bytes < 0 /*|| bytes < ((char *)main - ar + bytes)*/)
+	if (bytes < 0)
 	{
 		printf("%s\n", e);
 		exit(2);
 	}
 	while (main_bytes < bytes)
 	{
-		if (ar[main_bytes] == '\0')
+		if (((char *)ar)[main_bytes] == '\0')
 			break;
 		main_bytes++;
 	}
-	/*main_bytes = (char *)main - ar + bytes;*/
 
 	for (i = 0; i < bytes && i < main_bytes; i++)
 	{
 		if (i == (bytes - 1) || i == (main_bytes - 1))
 		{
-			printf("%02hhx ", ar[i]);
+			printf("%.2x ", *((unsigned char *) (ar +i)));
 			break;
 		}
-		printf("%02hhx ", ar[i]);
+		printf("%.2x ", *((unsigned char *) (ar +i)));
 	}
 	return (0);
 }
