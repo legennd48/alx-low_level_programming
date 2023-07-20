@@ -65,13 +65,13 @@ void print_all(const char *const format, ...)
 		{'i', print_i},
 		{'f', print_f},
 		{'s', print_string},
-		{NULL, NULL}
+		{0, NULL}
 	};
 
 	va_start(arg, format);
 
 	i = 0;
-	while (format != NULL && format[i] != NULL)
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
 		while (id[j].type != NULL)
