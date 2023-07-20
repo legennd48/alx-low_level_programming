@@ -28,7 +28,7 @@ void print_i(va_list arg)
  */
 void print_f(va_list arg)
 {
-	printf("%f", va_arg(arg, float));
+	printf("%f", va_arg(arg, double));
 }
 
 /**
@@ -38,9 +38,8 @@ void print_f(va_list arg)
 
 void print_string(va_list arg)
 {
-	char *s;
+	char *s = va_arg(arg, char *);
 
-	s = va_arg(arg, char *);
 	if (s == NULL)
 	{
 		printf("(nil)");
@@ -74,7 +73,7 @@ void print_all(const char *const format, ...)
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (id[j].type != NULL)
+		while (id[j].type != '\0')
 		{
 			if (id[j].type == format[i])
 			{
