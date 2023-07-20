@@ -39,10 +39,11 @@ int main(int argc, char *argv[])
 	{
 		if (i == (bytes - 1) || i == (main_bytes - 1))
 		{
-			printf("%.2x ", *((unsigned char *) (ar +i)));
+			printf("%.2x ", *((unsigned char *)(ar + i)));
 			break;
 		}
-		printf("%.2x ", *((unsigned char *) (ar +i)));
+		printf("%.2x ", *((unsigned char *)(ar + i)));
 	}
+	printf("\n");
 	return (0);
 }
