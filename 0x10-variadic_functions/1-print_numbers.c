@@ -4,7 +4,7 @@
 
 /**
  * print_numbers - prints numbers followed by a new line
- * @seperator: string that separates each printed number
+ * @separator: string that separates each printed number
  * @n: number of arguments
  */
 
