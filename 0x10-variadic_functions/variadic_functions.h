@@ -8,12 +8,13 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 
 /**
- * f - structure defining data type of format specifier and
+ * struct f - structure defining data type of format specifier and
  * tge corresponding function
  * @type: the format character
  * @func: function pointer of thr corresponfing function
  *
- * Description:this helps to select the function that matches the provided specifier
+ * Description:this helps to select the function
+ * that matches the provided specifier
  */
 
 typedef struct f
