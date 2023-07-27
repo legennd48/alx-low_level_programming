@@ -3,7 +3,7 @@
 
 /**
  * message_b4_main - prints a sentence before the main function
- begins to run
+ * begins to run
  */
 void __attribute__((constructor)) message_b4_main(void)
 {
