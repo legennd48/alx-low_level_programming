@@ -1,20 +1,18 @@
 section .data
-    hello_msg db "Hello, Holberton",0x0A,0   ; Null-terminated message with newline
+    hello_msg db "Hello, Holberton",0x0A,0
 
 section .text
-    extern printf                            ; Declare printf as an external function
+    extern printf
 
-global main
+global main      ; Change the entry point label from _start to main
 
 main:
-    ; Prepare arguments for printf
-    lea rdi, [hello_msg]        ; Load the address of the hello_msg into rdi
+    mov   edi, format
+    xor   eax, eax
+    call  printf
 
-    ; Call printf
-    call printf
+    xor   eax, eax   ; Return 0 from the main function (optional in this case)
+    ret             ; Return from main
 
-    ; Exit the program
-    mov rax, 60                 ; syscall number for exit
-    xor rdi, rdi                ; Exit code 0
-    syscall                     ; Invoke syscall to exit
+format: db `Hello, Holberton\n`,0
 
