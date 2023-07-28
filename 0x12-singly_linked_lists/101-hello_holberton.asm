@@ -4,9 +4,9 @@ section .data
 section .text
     extern printf                            ; Declare printf as an external function
 
-global _start
+global main
 
-_start:
+main:
     ; Prepare arguments for printf
     lea rdi, [hello_msg]        ; Load the address of the hello_msg into rdi
 
