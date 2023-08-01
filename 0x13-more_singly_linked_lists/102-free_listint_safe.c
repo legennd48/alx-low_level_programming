@@ -10,7 +10,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	unsigned int nodes = 0;
-	listint_t *current_node, *temp;
+	listint_t *current_node = NULL, *temp = NULL;
 
 	if (h == NULL || *h == NULL)
 		return (0);
@@ -31,10 +31,7 @@ size_t free_listint_safe(listint_t **h)
 
 		/* Break the loop if a loop is detected */
 		if (current_node == *h)
-		{
-			*h = NULL;
 			break;
-		}
 	}
 	*h = NULL;
 
