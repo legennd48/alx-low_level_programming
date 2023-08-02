@@ -14,26 +14,21 @@ size_t free_listint_safe(listint_t **h)
 
 	if (h == NULL || *h == NULL)
 		return (0);
-
 	current_node = *h;
-
 	while (current_node->next != NULL)
 	{
 		nodes++;
 		temp = current_node;
 		current_node = current_node->next;
-
 		/* Set the next pointer of the current node to NULL */
 		temp->next = NULL;
-
 		/* Free the current node */
 		free(temp);
-
 		/* Break the loop if a loop is detected */
 		if (current_node == *h)
 			break;
 	}
-	if (current_node != NULL)
+	if (current_node != NULL && nodes > 100)
 	{
 		nodes++;
 		free(current_node);
