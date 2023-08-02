@@ -33,6 +33,7 @@ size_t free_listint_safe(listint_t **h)
 		if (current_node == *h)
 			break;
 	}
+	nodes++;
 	*h = NULL;
 
 	return (nodes);
