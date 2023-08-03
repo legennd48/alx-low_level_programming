@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <string.h>
 /**
- * binary_to_unit - converts a binary string to decimal
+ * binary_to_uint - converts a binary string to decimal
  * @b: string of binary num to be converte
  * Return: 0 or conversion result
  */
