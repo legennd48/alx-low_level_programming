@@ -37,7 +37,7 @@ int prnt_error(int val, char *s, int fd)
 
 int main(int ac, char **as)
 {
-	int fd, rd, wr, fd2;
+	int fd, rd, wr, cl, fd2;
 	char buff[1024];
 
 	if (ac != 3)
@@ -48,29 +48,25 @@ int main(int ac, char **as)
 		prnt_error(98, as[1], 0);
 	rd = read(fd, buff, 1024);
 	if (rd < 0)
-	{
 		prnt_error(98, as[1], 0);
-	}
 	fd2 = open(as[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd2 < 0)
-	{
 		prnt_error(99, as[2], 0);
-	}
 	while (rd != 0)
 	{
 		if (rd < 0)
-		{
 			prnt_error(98, as[1], 0);
-		}
 		wr = write(fd2, buff, rd);
 		if (wr < 0)
-		{
 			prnt_error(99, as[2], 0);
-		}
 		rd = read(fd, buff, 1024);
 		fd2 = open(as[2], O_WRONLY | O_APPEND);
 	}
-	close(fd) < 0 ? (prnt_error(100, NULL, fd)) : close(fd);
-	close(fd2) < 0 ? (prnt_error(100, NULL, fd2)) : close(fd2);
+	cl = close(fd);
+	if (cl < 0)
+		prnt_error(100, NULL, fd);
+	cl = close(fd2);
+	if (cl < 0)
+		prnt_error(100, NULL, fd2);
 	return (0);
 }
