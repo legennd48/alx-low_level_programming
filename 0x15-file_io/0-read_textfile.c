@@ -11,7 +11,7 @@
  * Return: number of bytes written or 0 on falure.
  */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+size_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, bytesRead, bytesWritten;
 	char *s;
