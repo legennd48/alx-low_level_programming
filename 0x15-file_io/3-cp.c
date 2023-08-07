@@ -5,6 +5,7 @@
  * @val: num is either exit value
  * @s: name of file causing the error
  * @fd: file descriptor
+ * Return: 0 Success
  **/
 int prnt_error(int val, char *s, int fd)
 {
@@ -31,6 +32,7 @@ int prnt_error(int val, char *s, int fd)
  * main - copies content from one file to another
  * @ac: number of arguments
  * @as: arguments strings. (argument vector)
+ * Return: 0
  */
 
 int main(int ac, char **as)
@@ -39,7 +41,7 @@ int main(int ac, char **as)
 	char *buff = malloc(sizeof(char) * 1024);
 
 	if (ac != 3)
-		prnt_error(97, NULL , 0 );
+		prnt_error(97, NULL, 0);
 
 	fd = open(as[1], O_RDONLY);
 	rd = read(fd, buff, 1024);
