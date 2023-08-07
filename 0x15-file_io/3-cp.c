@@ -48,7 +48,7 @@ int main(int ac, char **as)
 
 	if (buff == NULL || fd < 0 || rd < 0)
 		prnt_error(98, as[1], 0);
-	fd2 = open(as[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
+	fd2 = open(as[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd2 < 0)
 	{
 		free(buff);
@@ -67,6 +67,7 @@ int main(int ac, char **as)
 			free(buff);
 			prnt_error(99, as[2], 0);
 		}
+		fd2 = open(as[2], O_WRONLY | O_APPEND);
 	}
 	free(buff);
 	close(fd) < 0 ? (prnt_error(100, NULL, fd)) : close(fd);
