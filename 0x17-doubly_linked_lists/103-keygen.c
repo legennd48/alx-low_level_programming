@@ -75,8 +75,8 @@ int generateRandomChar(char *username)
 
 /**
  * main - Entry point
- * @argc: arguments count
- * @argv: arguments vector
+ * @ac: arguments count
+ * @av: arguments vector
  * Return: Always 0
  */
 int main(int ac, char **av)
