@@ -4,7 +4,7 @@ Module: Calculate perimeter of an island in a 2D grid
 """
 
 
-def calculate_island_perimeter(grid):
+def island_perimeter(grid):
     """Calculate the perimeter of an island in a 2D grid.
 
     Args:
