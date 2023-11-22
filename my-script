@@ -1,5 +1,0 @@
-#!/bin/bash
-alias c=clear em=emacs ch="chmod u+x" ec=echo
-alias add="git add ." commit="git commit -m" push="git push" pull="git pull" status="git status" clone="git clone"
-alias checkout="git checkout" merge="git merge" fetch="git fetch" diff="git diff"
-alias rm="rm -i"
