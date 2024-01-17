@@ -1,0 +1,58 @@
+#include "search_algos.h"
+
+/**
+ * jump_search - Searches throught an orderd list for a specific key
+ * prints the value found at index every time a value is compared to the key
+ * @array: the array we a looking through
+ * @size: The size of the array
+ * @value: hte search key
+ * Return: -! on failure and index of the key on Success!
+ */
+
+int jump_search(int *array, size_t size, int value)
+{
+	int step, prev = 0, a, b;
+
+	if (array)
+	{
+		step = (int)sqrt(size);
+		while (array[min(step, (int)size) -1] < value)
+		{
+			a = min(step, (int)size) -1;
+			b = array[min(step, (int)size) -1];
+			printf("Value checked array[%d] = [%d]\n", a , b);
+			prev = step;
+			step += (int)sqrt(size);
+			if (prev > (int)size)
+				return (-1);
+		}
+		printf("Value found between indexes [%d] and [%d]\n",
+			       prev, min(step, (int)size) - 1);
+		while (array[prev] < value)
+		{
+			prev += 1;
+			if (prev == min(step, (int)size))
+				return (-1);
+			printf("Value checked array[%d] = [%d]\n", prev , array[prev]);
+		}
+		if (array[prev] == value)
+			return (prev);
+		else
+			return (-1);
+	}
+	return (-1);
+}
+
+/**
+ * min - find the minimum between two integers
+ * @a: first integer to compare
+ * @b: secont integer to compare
+ * Return: the lowest integer of the two
+ */
+
+int min(int a, int b)
+{
+	if (a > b)
+		return (b);
+	return (a);
+}
