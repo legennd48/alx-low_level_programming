@@ -15,4 +15,5 @@ int advanced_binary(int *array, size_t size, int value);
 void printArray(int *array, size_t lo, size_t hi);
 int min(int a, int b);
 int bin_search(int *array, int value, size_t lo, size_t hi);
+int binary_search_recursive(int *array, size_t left, size_t right, int value);
 #endif /* search_algos */
